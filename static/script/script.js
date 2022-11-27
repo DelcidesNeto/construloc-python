@@ -1,3 +1,11 @@
+function redirecionar(){
+    var url_site = window.location
+    if (url_site == 'http://construloc.herokuapp.com/'){
+        window.location.href = 'https://construloc.herokuapp.com/'
+    }
+}
+
+
 function mudar_tamanho(){
     if (innerWidth >= 607){
         var opcoes = window.document.querySelector('#opcoes')
