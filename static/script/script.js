@@ -1,8 +1,3 @@
-function redirecionar(){
-    window.location.href = 'https://construloc.herokuapp.com/'
-}
-
-
 function mudar_tamanho(){
     if (innerWidth >= 607){
         var opcoes = window.document.querySelector('#opcoes')
