@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" onload="redirecionar()">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style_index/style_portrait.css') }}" media="screen and (orientation: portrait)">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body onresize="mudar_tamanho()" onload="redirecionar()">
+<body onresize="mudar_tamanho()">
     <main>
         <code>
             <nav>
