@@ -1,0 +1,22 @@
+@media screen and (orientation: portrait) {
+    .mapa{
+        width: 50%;
+        height: 30vw;
+        float: left;
+    }
+    .endereco>h1, .endereco>address{
+        float: right;
+        width: 50%;
+    }
+}
+@media screen and (orientation: landscape) {
+    .mapa{
+        width: 50%;
+        height: 30vw;
+        float: left;
+    }
+    .endereco>h1, .endereco>address{
+        float: right;
+        width: 50%;
+    }
+}

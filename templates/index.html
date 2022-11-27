@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construloc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index/style.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index/style_landscape.css') }}" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index/style_portrait.css') }}" media="screen and (orientation: portrait)">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body onresize="mudar_tamanho()">
+    <main>
+        <code>
+            <nav>
+                <h1 class="topo">Construloc</h1>
+                <rotacao class="rotacao"> <!--Só aparece no Celular-->
+                    <img class="telefone" src="{{ url_for('static', filename='imagens/rotacao.png') }}" alt="">
+                </rotacao>
+                <a href="{{ url_for('endereco') }}">Endereço</a>
+                <sep>|</sep>
+                <a href="">Contato</a>
+                <sep>|</sep>
+                <a href="">Sobre Nós</a>
+                <div id="menu_celular"> <!--Só aparece no Celular-->
+                    <i id="menu" class="material-icons" style="font-size: 1.3em;" onclick="mostrar_menu()">menu</i>
+                    <div id="opcoes">
+                        <a href="endereco/endereco.html">Endereço</a>
+                        <a href="contato/contato.html">Contato</a>
+                        <a href="">Sobre Nós</a>
+                    </div>
+                </div>
+            </nav>
+            <section class="fundo">
+                <h1 class="betoneira">Alugue a sua Betoneira</h1>
+                <section id="img1" onmousemove="mostrar_botao(1)" onmouseout="esconder_botao(1)">
+                    <p class="locacao">
+                        <input title="Alugar Betoneira" id="botao1" class="botao" type="button" value="Fazer Locação" onclick="pagina_betoneira()" onmousemove="escurecer_imagem(1)" onmouseout="mostrar_imagem(1)">
+                    </p>
+                </section>
+                <p class="texto">
+                    Precisando de uma Betoneira, mas não sabe onde alugar? <br>Seus problemas acabaram, pois aqui na Construloc nossas betoneiras são feitas para você trabalhar sem interrupções. <br>Prezamos pela facilidade e conforto de você cliente amigo, então, caso algo aconteça basta entrar em contato conosco pelo <a href="https://wa.me/5562986222629" title="Whatsapp">(62)98622-2629</a> que faremos o possível para resolver o seu problema. <br>Caso queira alugar a Betoneira é só clicar no botão "FAZER LOCAÇÃO" que se encontra logo acima.
+                </p>
+                <h1 class="andaime">Alugue seus Andaimes <br></h1>
+                <section id="img2" onmousemove="mostrar_botao(2)" onmouseout="esconder_botao(2)">
+                    <p class="locacao">
+                        <input title="Alugar Andaimes" id="botao2" class="botao" type="button" value="Fazer Locação" onclick="pagina_andaime()" onmousemove="escurecer_imagem(2)" onmouseout="mostrar_imagem(2)">
+                    </p>
+                </section>
+                <p class="texto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta tempora accusantium consequatur optio blanditiis temporibus beatae modi perspiciatis laboriosam eum itaque alias sunt quia ratione, sequi est. Exercitationem, nisi saepe.</p>
+            </section>
+        </code>
+    </main>
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</body>
+</html>
