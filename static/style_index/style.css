@@ -3,23 +3,6 @@
     50%{transform: rotate3d(1, 0, 0, 360deg); color: #0040ff; text-shadow: 0px 0px 17px #0040ff;}
     100%{transform: rotate3d(1, 0, 0, 0deg);}
 }
-@keyframes animacao_do_botao {
-    0%{transform: scale(1.7);}
-    50%{transform: scale(1.3);}
-    100%{transform: scale(1.7);}
-}
-@keyframes animacao_betoneira {
-    0%{background-image: linear-gradient(to right, #252627, #ff0022, #252627);}
-    25%{background-image: linear-gradient(to right, #252627, #ff0022);}
-    50%{background-image: linear-gradient(to left, #252627, #ff0022, #252627);}
-    75%{background-image: linear-gradient(to left, #252627, #ff0022);}
-}
-@keyframes animacao_andaime {
-    0%{background-image: linear-gradient(to right, #0A2239, #FFF9FB, #0A2239);}
-    25%{background-image: linear-gradient(to right, #0A2239, #FFF9FB);}
-    50%{background-image: linear-gradient(to left, #0A2239, #FFF9FB, #0A2239);}
-    75%{background-image: linear-gradient(to left, #0A2239, #FFF9FB);}
-}
 @font-face {
     font-family: font_titulo;
     src: url('../fonts/Anson-Regular.otf');
@@ -28,106 +11,75 @@
     font-family: font_logo;
     src: url('../fonts/Monoton-Regular.ttf');
 }
+::-webkit-scrollbar{
+    display: none;
+}
 *{
     margin: 0px;
     padding: 0px;
 }
 body{
-    background-color: #2F3061;
-    height: 100%;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
 }
-nav{
-    background-image: linear-gradient(to bottom, #556F7A, #2E6171);
-    padding: 10px;
-    box-shadow: 0px 2px 20px 1px #000000da;
+section.fundo_topo{
     text-align: center;
-    background: gray url('../imagens/fundo_cabecalho.jpeg') no-repeat center;
-    background-size: cover;
+    font-size: 3vw;
 }
-.texto{
-    text-align: justify;
-    font-size: 2vw;
-    line-height: 2em;
-    margin-bottom: 5%;
+section>nav a{
+    text-shadow: 0px 1px 1px white;
 }
-.topo{
+.logo{
     font: normal 5vw font_logo, Times, serif;
     animation: animacao_logo 4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
     text-shadow: 0px 0px 17px black;
-    
 }
-sep{
-    font-size: 2vw;
+h1{
+    font-family: font_logo;
+    color: blue;
 }
-nav>a{
-    font-size: 2vw;
-    padding: 10px;
+a{
     text-decoration: none;
     color: black;
 }
-#menu{
-    display: none;
+.fundo_topo{
+    background: red url('../imagens/fundo_cabecalho.jpeg') no-repeat fixed;
+    background-size: cover;
 }
-#opcoes>a{
-    display: none;
+.alugar{
+    padding: 10px;
+    margin: 10px 0px 0px 15vw;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 2vw;
 }
-.fundo{
-    margin: 10% 5% 0px 5%;
-    padding: 0px 10px 10px 10px;
-    border: 1px solid #0000009a;
-    box-shadow: 0px 0px 10px 0px #000000a8;
-    background-color: #9899A6;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+.alugar:hover{
+    background-color: orange;
+}
+.fundo_betoneira{
+    background-color: #c7c722;
 }
 .betoneira{
-    margin: 0px -10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vw;
-    font: bold 4vw font_titulo, Courier, monospace;
-    font-variant: small-caps;
-    animation: animacao_betoneira 2s linear infinite;
-    background-image: linear-gradient(to right, #252627, #ff0022, #252627);
+    float: left;
+    width: 50%;
+}
+.descricao_betoneira{
+    font-size: 2vw;
+    float: right;
+    padding: 7% 0px 7% 0px;
+    width: 50%;
+    text-align: justify;
+}
+.betoneira, .descricao_betoneira, .alugar, .andaime{
+    visibility: hidden;
+}
+.fundo_andaime{
+    background-color: #26dd2f;
 }
 .andaime{
-    margin: 0px -10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5vw;
-    font: bold 4vw font_titulo, Courier, monospace;
-    font-variant: small-caps;
-    animation: animacao_andaime 2s linear infinite;
-    background-image: linear-gradient(to right, #0A2239, #FFF9FB, #0A2239);
-}
-.fundo a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-.locacao{
-    display: inline-block;
-    margin-top: 15%;
-    margin-left: 45%;
-}
-.botao{
-    background-image: linear-gradient(to right, #85FFC7, #28666e68);
-    cursor: help;
-    border: none;
-    font-size: 1.5vw;
-    padding: 5px;
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 10px 2px #0000007d;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    transition: 1s;
-}
-#botao1, #botao2{
-    display: none;
-}
-.botao:hover{
-    transform: scale(1.7);
-    animation: animacao_do_botao 2s 1s linear infinite;/*O primeiro número é o tempo da animação, e o segundo é o delay.*/
-    background-image: linear-gradient(to right, #42ffa7, #45adbbee);
+    float: right;
+    width: 50%;
 }

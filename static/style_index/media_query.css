@@ -1,0 +1,46 @@
+@keyframes animacao_telefone {
+    0%{transform: rotate3d(0, 0, 1, 0deg);}
+    25%{transform: rotate3d(0, 0, 1, -90deg);}
+    50%{transform: rotate3d(0, 0, 1, -90deg);}
+    75%{transform: rotate3d(0, 0, 1, 0deg);}
+    100%{transform: rotate3d(0, 0, 1, 0deg);}
+}
+@media screen and (orientation: portrait) {
+    .conteudo{
+        height: 100vh;
+    }
+    .conteudo section{
+        height: 50vh;
+    }
+    .espaco{
+        padding-top: 20vh;
+    }
+    .rotacao{
+        position: absolute;
+        display: block;
+        transform: rotate(135deg);
+        padding-top: 10px;
+        top: 0%;
+        left: 85vw;
+    }
+    .telefone{
+        animation: animacao_telefone 3s linear infinite;
+        height: 30px;
+        width: 30px;
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+}
+@media screen and (orientation: landscape) {
+    .rotacao{
+        display: none;
+    }
+    .conteudo{
+        height: 100vh;
+    }
+    .conteudo section, header{
+        height: 100vh;
+    }
+    .espaco{
+        padding-top: 35vh;
+    }
+}
