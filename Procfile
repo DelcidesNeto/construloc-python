@@ -1,1 +1,1 @@
-web: gunicorn construloc:app
+web: gunicorn app:app
